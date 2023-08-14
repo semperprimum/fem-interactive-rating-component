@@ -50,7 +50,6 @@ export const Rating = ({ checkboxes, setSubmitted }) => {
 					))}
 				</Fieldset>
 				<Button
-					aria-disabled={rating === null}
 					disabled={rating === null}
 					onClick={() => handleFormSubmit()}
 				>
