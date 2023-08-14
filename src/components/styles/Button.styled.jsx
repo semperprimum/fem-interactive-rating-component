@@ -14,12 +14,13 @@ export const Button = styled.button`
 	font-weight: 700;
 
 	@media only screen and (min-width: 28.125em) {
-	letter-spacing: .125rem;
-	line-height: normal;
-	transition: color 170ms ease, background 170ms ease;
+		letter-spacing: 0.125rem;
+		line-height: normal;
+		transition: color 170ms ease, background 170ms ease;
 		&:not(&:disabled) {
 			cursor: pointer;
-			&:hover {
+			&:hover,
+			&:focus-visible {
 				background: var(--clr-neutral-100);
 				color: var(--clr-primary-400);
 			}

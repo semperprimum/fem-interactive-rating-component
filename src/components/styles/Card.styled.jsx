@@ -100,7 +100,8 @@ export const Checkbox = styled.input`
 		width: 3.1875rem;
 		height: 3.1875rem;
 		&:not(&:checked) {
-			&:hover {
+			&:hover,
+			&:focus-visible {
 				background: var(--clr-neutral-500);
 				color: var(--clr-neutral-100);
 			}

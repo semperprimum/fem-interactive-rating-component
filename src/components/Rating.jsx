@@ -20,14 +20,13 @@ export const Rating = ({ checkboxes, setSubmitted }) => {
 		ratingUpdate((prev) =>
 			element.target.value === prev ? null : element.target.value
 		);
-		console.log({ value: element.target.value, rating: rating });
 	};
 	const handleFormSubmit = () => {
 		setSubmitted(true);
 	};
 	return (
 		<Card>
-			<IconWrapper>
+			<IconWrapper aria-hidden="true">
 				<IconStar />
 			</IconWrapper>
 			<Heading>How did we do?</Heading>
@@ -50,7 +49,11 @@ export const Rating = ({ checkboxes, setSubmitted }) => {
 						</CheckboxGroup>
 					))}
 				</Fieldset>
-				<Button disabled={rating === null} onClick={() => handleFormSubmit()}>
+				<Button
+					aria-disabled={rating === null}
+					disabled={rating === null}
+					onClick={() => handleFormSubmit()}
+				>
 					Submit
 				</Button>
 			</Form>
